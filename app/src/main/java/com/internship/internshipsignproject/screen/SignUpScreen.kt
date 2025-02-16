@@ -39,6 +39,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.internship.internshipsignproject.ui.theme.Primary
+import com.internship.internshipsignproject.ui.theme.White20
 import com.internship.internshipsignproject.viewmodel.SignUpViewModel
 
 @Composable
@@ -229,7 +231,7 @@ fun SignUpScreen(
                             Toast.makeText(context, "회원가입 성공", Toast.LENGTH_SHORT).show()
                         },
                         onFailure = {
-                            Toast.makeText(context, "회원가입 실패", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, "잘못 입력하셨습니다.ㅁㄴ", Toast.LENGTH_SHORT).show()
                         }
                     )
                     navigateToSignIn()
@@ -239,9 +241,10 @@ fun SignUpScreen(
                 .fillMaxWidth()
                 .padding(start = 24.dp, end = 24.dp, bottom = 24.dp),
             shape = RoundedCornerShape(12.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = Color.Unspecified)
+            colors = ButtonDefaults.buttonColors(containerColor = Primary)
         ) {
-            Text(text = "회원가입")
+            Text(text = "회원가입",
+                color = White20)
         }
     }
 }

@@ -38,6 +38,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.internship.internshipsignproject.ui.theme.Primary
+import com.internship.internshipsignproject.ui.theme.White20
 import com.internship.internshipsignproject.viewmodel.SignInViewModel
 
 @Composable
@@ -173,9 +175,10 @@ fun SignInScreen(
                 .fillMaxWidth()
                 .padding(start = 24.dp, end = 24.dp, bottom = 24.dp),
             shape = RoundedCornerShape(12.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = Color.Unspecified)
+            colors = ButtonDefaults.buttonColors(containerColor = Primary)
         ) {
-            Text(text = "로그인")
+            Text(text = "로그인",
+                color = White20)
         }
     }
 }

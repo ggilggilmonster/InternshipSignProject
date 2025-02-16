@@ -21,6 +21,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.internship.internshipsignproject.ui.theme.Primary
+import com.internship.internshipsignproject.ui.theme.White20
 
 @Composable
 fun HomeScreen(
@@ -73,9 +75,10 @@ fun HomeScreen(
                 .fillMaxWidth()
                 .padding(start = 24.dp, end = 24.dp, bottom = 6.dp),
             shape = RoundedCornerShape(12.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = Color.Unspecified)
+            colors = ButtonDefaults.buttonColors(containerColor = Primary)
         ) {
-            Text(text = "로그인")
+            Text(text = "로그인",
+                color = White20)
         }
 
         Button(
@@ -84,9 +87,10 @@ fun HomeScreen(
                 .fillMaxWidth()
                 .padding(start = 24.dp, end = 24.dp, bottom = 24.dp),
             shape = RoundedCornerShape(12.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = Color.Unspecified)
+            colors = ButtonDefaults.buttonColors(containerColor = Primary)
         ) {
-            Text(text = "회원가입")
+            Text(text = "회원가입",
+                color = White20)
         }
     }
 }
